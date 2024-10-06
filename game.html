@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket</title>
+    <link rel="stylesheet" href="game.css" />
+  </head>
+
+  <body>
+    <h1>Bat | Ball | Stump</h1>
+
+    <button
+    onclick="console.log('You chose Bat');
+    Computerchoice = CompChoice();
+    getResult('bat', Computerchoice);" class="bat">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAYAAADjVADoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC6klEQVR4nO2aO2gUURSGv+xusBAL8YWNKIL4QCGjo9jYiYUYbUVbFR/YGAQrjSLKrq9gHqugxjfEwkrQVlsLEcVK0UIJQdksBE1AGLlwRsbL7O6YwrjnzA+3mB1Y5n7z/+eeOzOQK1cu4yrO9AX8LxDuA5eBDoxDiGQ4GCa1FBhNgHDjEoZUAqrAWmCNB2PESs0oJuIwBqwDVgJfgEdAJ0a014vCmDhjmThFvUrAAaAAlD0Y1zCiYiIOD+X4rBybikOf54BhccYeS3FYLfn/6ME4iLE4TABbgCXAe2txKEg/EN/9OrBZGqg+S3HoBE54UahLTFSpS+yeBsE54XEKjBFtTgiAb8AksL3JBuoJMAvo0VgTQqCWmOx3YKucq3hRiBLO6NDohMgbsTMWAm+8c+qdEHnDOWM5sBh4p7UmhC0guHFKJt0lMCraIAQN4pAcJ6VQ3kspoGYgnE9A8GuGOQh3mxRQ9TXhtEB40KKApjVdaiCcSWme0kZNiqfKOJSbxCE5xoGNKIdwJ4eAbQiV3An8hnBbqxNCqepTUv1/pkzuXEYn1OT/2hpCNzBfnh75zVIhgxPaFkIgNcFB2AnMBV56k7sgThjWHodIdovzgFcpS2QhA4S2dULodYyfgU8NINyyAGE3cLjBEukg3LQAIQIOAa9TaoKDcEM7hCl5qTKRMrmLliB0S2EctQYhyLBExl+wDWldIoO/gDCYQ8AGhF0NnHBFnDCQAcImlEKoSmHMIaAYQpholgZkF+nvHa6KE6pWOsYfwFdvcv0CYUgrhCDD47XrAqHfQhzG5TX8U9ks9QL7gG0CYVCrE5zWA6uA2fypReKUHcAKgaEWQgk4Iltm95zxBfBB3jMmJ+n2Fvu1Qoh1vMWdjsQZvZohxDrWAsSCBg9Y2rYwTgfGpLTRzyxAaAbDfeLr9NYKhFg9Hojn8nvdEoQ0GO7DjTkWIfgwytJnmISQXFqPAhs0LZHTVXGmLyBXrlz8K/0CVemWGGYKNbwAAAAASUVORK5CYII="/>
+    </button>
+
+    <button
+    onclick="console.log('');
+    Computerchoice =CompChoice();
+    getResult('ball', Computerchoice);" class="ball">
+    <img src="data:image/png;base64,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"/>
+    </button>
+
+    <button
+      onclick="console.log('You chose wicket');
+    Computerchoice = CompChoice();
+    getResult('wicket',Computerchoice);" class="wicket">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD5UlEQVR4nO1bTWwTRxT2qVIPSFQ9IAGVuDQz62BSfgUkxdnZdeKUkJAUNwhBiULwzKwXOz+QAKXBapECaW5F0KZSDYdKaS/lEOAISOVSFcEVwSUQJA49cUMQPzRr2VogG6+FQ4B9T/okS55P7823783PszcUQquuaYZYG2birmaK6flAdNEzF58ycbUclxr8SuhdsnAi8RFpFGnK5DBl/C/KBLSII9CWHpoTq5vlLGX8v8J4OawxPlT8rLj1uzOeXPWdGlMabyQH6qKZpYsqQI2ZbCgEVUDdV9bsD3+Owejf43OCdffPuse7oRkinxzLenKTZ046Y9ycGib3LqoAxOCNKpDM2R89A/dC19HjziRaU0MVc7+7OOpwCePdb33Sq9mBZRrjB6guk1Tn44uZAVQXORWHyoSVm/s/XrBJf874CqonO9Vnyvg5r0n4WwO8uf7WAE/sXjABiC5OEMafOQLoIreuzYbDv2UdnL50Hk7+8XPhKTL+/7wruSFn1LiDZ0ZhbGqihB2HjgPR+fOyuwATT9a3HXru5hZ9L2g5kGhyA9H56aIA69vtfHbyFCicv/E7jE9N+AqCRPmqwprxE0zcvFjC14MjoJnyYbk4lO8NHelnbq5f31UzGkQBNCPZRRi/HVgBiM6zykkxCBSgHTMgjyUwGaA1gDI+QpnIB7YEqNFbQxu55SXAues5qO8aeKyuxB+kAMrI1p4lXgIUgrlwIVTG3lsBaKPcTnTxNNIgPwmkAITxbseJmgAKIF7LgF//cZ7iHWKmlgcyA8YvF4KghtgfTAGmPvBtkKAAHDOAukpAMwVsbEs52NyRhk070xWVwLpWG7Z0ZkpYE09B2JQz5TKx6NvN9eu7qiVQZ0robbUdWIl+4B0DFQmQ2JGBvl2DJRhxG9bE5ONycSjfX8Ssl7h+fVdVgK3NFlzbM+DgVl8WbopsRQL88u0xuJ8+VYLdOehbgC9b7Lyb69f3GxlBAThmAMUSEMFdAzRd7FNOapvkZ4EUgBqpTykTqWIQgRPAbSiALnJhQ0B9k+VgW0sKGuJ2RRmwqdmCaItdwtqYBRGfGaB8u7l+fVfNqC5ykbgF21ODDnYd+R529p2oSIBYzxB8MzxSwpZEn+/bYCRuzbq5fn1XzWgQr8NuQwF0zIAclkA7rgF5XAQncRcA3AYn8RwAeBC6gSdBwKPwFN4FAC9DDG+DgNdhhv2A7tA8hg2RKHaEVmFLjGFPELApeha7wvBet8UjQf5hhOiipzYmZ2qb5COFsCke1JpyWjPEvRpDbpyPq15u1Ezxrxr/KjQmJvz4Vq/Pvcp1Xtou8091tNDL9gKj94IPvYv1bgAAAABJRU5ErkJggg=="/>
+    </button>
+    <div class="display">
+      <h3 id="user"></h3>
+      <h3 id="comp"></h3>
+      <h3 id="Score"></h3>
+      <h3 id="result"></h3>
+    </div>
+
+    
+    <script>
+      let Score = {
+        win:0,
+        lost:0,
+        tie:0,
+        
+      };
+      function CompChoice() {
+        console.log(Score);
+        let Computerchoice;
+        let randomNumber = Math.random() * 3;
+        if (randomNumber > 0 && randomNumber <= 1) {
+          return "bat";
+        } else if (randomNumber <= 2) {
+          return "ball";
+        } else {
+          return "wicket";
+        }
+      }
+
+      function getResult(userMove,compMuve){
+        if(userMove ==='bat'){
+            if(compMuve ==='ball'){
+                Score.win++;
+                document.querySelector('#user').innerHTML= `User choose  ${userMove}`
+                document.querySelector('#comp').innerHTML= `computer choose  ${compMuve}`
+                document.querySelector('#Score').innerHTML= `Won:${Score.win}.\n Lost:${Score.lost}.\n Tie:${Score.tie}`
+                document.querySelector('#result').innerHTML= `Score:\n  Won:${Score.win} lost:${Score.lost} Tie:${score.tie}`
+            }
+            else if(compMuve === 'bat'){
+                Score.tie++;
+                document.querySelector('#user').innerHTML= `User choose  ${userMove}`
+                document.querySelector('#comp').innerHTML= `computer choose  ${compMuve}`
+                document.querySelector('#score').innerHTML= `Won:${Score.win}.\n Lost:${Score.lost}.\n Tie:${Score.tie}`
+                
+                
+            }
+            else{
+                Score.lost++;
+                document.querySelector('#user').innerHTML= `User choose  ${userMove}`
+                document.querySelector('#comp').innerHTML= `computer choose  ${compMuve}`
+                document.querySelector('#score').innerHTML= `Won:${Score.win}.\n Lost:${Score.lost}.\n Tie:${Score.tie}`
+                
+            } 
+          }
+        else if(userMove ==='ball'){
+            if(compMuve ==='ball'){
+                Score.tie++;
+                document.querySelector('#user').innerHTML= `User choose  ${userMove}`
+                document.querySelector('#comp').innerHTML= `computer choose  ${compMuve}`
+                document.querySelector('#score').innerHTML= `Won:${Score.win}.\n Lost:${Score.lost}.\n Tie:${Score.tie}`
+                
+            }
+            else if(compMuve === 'bat'){
+                Score.lost++;
+                document.querySelector('#user').innerHTML= `User choose  ${userMove}`
+                document.querySelector('#comp').innerHTML= `computer choose  ${compMuve}`
+                document.querySelector('#score').innerHTML= `Won:${Score.win}.\n Lost:${Score.lost}.\n Tie:${Score.tie}`
+                
+            }
+            else{
+                Score.win++;
+                document.querySelector('#user').innerHTML= `User choose  ${userMove}`
+                document.querySelector('#comp').innerHTML= `computer choose  ${compMuve}`
+                document.querySelector('#score').innerHTML= `Won:${Score.win}.\n Lost:${Score.lost}.\n Tie:${Score.tie}`
+                
+            } 
+          }
+        else{
+            if(compMuve ==='ball'){
+                Score.win++;
+                document.querySelector('#user').innerHTML= `User choose  ${userMove}`
+                document.querySelector('#comp').innerHTML= `computer choose  ${compMuve}`
+                document.querySelector('#score').innerHTML= `Won:${Score.win}.\n Lost:${Score.lost}.\n Tie:${Score.tie}`
+                
+            }
+            else if(compMuve === 'bat'){
+                Score.lost++;
+                document.querySelector('#user').innerHTML= `User choose  ${userMove}`
+                document.querySelector('#comp').innerHTML= `computer choose  ${compMuve}`
+                document.querySelector('#score').innerHTML= `Won:${Score.win}.\n Lost:${Score.lost}.\n Tie:${Score.tie}`
+            }
+            else{
+                Score.tie++;
+                document.querySelector('#user').innerHTML= `User choose  ${userMove}`
+                document.querySelector('#comp').innerHTML= `computer choose  ${compMuve}`
+                document.querySelector('#score').innerHTML= `Won:${Score.win}.\n Lost:${Score.lost}.\n Tie:${Score.tie}`   
+            } 
+        }
+        }
+    </script>
+  </body>
+</html>

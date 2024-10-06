@@ -1,0 +1,73 @@
+body{
+    /* background-color: rgb(101, 194, 85); */
+    background-image: url(stadium.jpg);
+    background-size: cover;
+    text-align: center;
+}
+h1{
+    font-size: 60px;
+    color: white;
+    font-weight: 600;
+    text-shadow: 140px black;
+    /* background-color: rgb(239, 239, 239); */
+}
+.bat{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 6px;
+}
+.bat:hover{
+    /* background-color: orange; */
+    box-shadow: 5px 3px 9px white;
+    height: 105px;
+    width: 105px;
+}
+.ball{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 6px;
+}
+.ball:hover{
+   /* background-color: white; */
+    box-shadow: 5px 3px 9px white;
+    height: 105px;
+    width: 105px;
+}
+.wicket{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 6px;
+}
+.wicket:hover{
+    /* background-color: green; */
+    box-shadow: 5px 3px 9px white;
+    height: 105px;
+    width: 105px;
+}
+
+#user{
+    color: rgb(9, 9, 9);
+    font-weight: 700;
+    font-size: 48px;
+    /* padding-top: 40px; */
+}
+#score{
+    color: azure;
+    font-weight: 700;
+    font-size: 38px;
+}
+#comp{
+    color: rgb(211, 211, 233);
+    font-weight: 900;
+    font-size: 58px;
+    /* background-color: brown; */
+    text-shadow: 8px solid black;
+    
+}
+.display{
+    padding-top: 190px;
+    
+}
